@@ -1,24 +1,24 @@
-# README
+# Mario's Food Products
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Author: Nate McGregor
+Platform: Rails
 
-Things you may want to cover:
+This application will display a list of food products, where each product may have a set of reviews.
 
-* Ruby version
+![alt text](/images/screen.png)
 
-* System dependencies
+# Instructions for setup
 
-* Configuration
+from the command line, run:
+```
+git clone https://github.com/hal2814/food-products-rails.git
+cd food-products-rails
+rails db:create
+rails db:seed
+rails server
+```
 
-* Database creation
+Then in your browser go to localhost:3000
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+copyright Nate McGregor 2017
