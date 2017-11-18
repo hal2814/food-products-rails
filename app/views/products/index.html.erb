@@ -1,10 +1,14 @@
-<% content_for(:name, "Products") %>
-<h1>Products</h1>
+<div class="row">
+  <div class="col-md-6">
+    <% content_for(:name, "Products") %>
+    <h1>Mario's Specialty Food Products</h1>
+      <h4>Itsa me, Mario!</h4>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %> </li>
+        <% end %>
+    </ul>
 
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %> </li>
-    <% end %>
-</ul>
-
-<%= link_to "New Product", new_product_path %>
+    <%= link_to "New Product", new_product_path %>
+  </div>
+</div>
