@@ -5,7 +5,7 @@ Platform: Rails
 
 This application will display a list of food products, where each product may have a set of reviews.
 
-![alt text](/images/screen.png)
+![alt text](/screen.png)
 
 # Instructions for setup
 
