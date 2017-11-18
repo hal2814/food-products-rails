@@ -1,15 +1,38 @@
 <div class="row">
-  <div class="col-md-6">
-    <% content_for(:name, "Products") %>
-    <h1>Mario's Specialty Food Products</h1>
-      <h4>Itsa me, Mario!</h4>
-    <ul>
-      <% @products.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %> </li>
-        <% end %>
-    </ul>
+  <%= image_tag("mario.jpg", :alt => "mario") %>
+  <div class="card col-md-6">
+    <div class="card-header">
+      <% content_for(:name, "Products") %>
+      <h1>Mario's Specialty Food Products</h1>
+        <h4>Its-a-me! Mario!</h4>
+    </div>
+    <div class="card-body">
+      <ul>
+        <% @products.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %> </li>
+          <% end %>
+      </ul>
+    </div>
   </div>
-  <div class="col-md-6">
-    <%= link_to "New Product", new_product_path %>
+  <div class="card col-md-6">
+    <div class="card-body">
+      <h3>Most recently added products: </h3>
+      <hr>
+      <% @recentProducts.each do |product| %>
+      <h4><%= link_to product.name, product_path(product) %></h4>
+      <% end %>
+      <h3>Most Reviewed Product: </h3>
+      <hr>
+      <% @mostReviewed.each do |product| %>
+      <h4><%= link_to product.name, product_path(product) %></h4>
+      <% end %>
+      <h3>Local Products (USA): </h3>
+      <hr>
+      <% @usa.each do |product| %>
+      <h4><%= link_to product.name, product_path(product) %></h4>
+      <% end %>
+
+      <button class="btn btn-info"><%= link_to "Add A New Product", new_product_path %></button>
+    </div>
   </div>
 </div>

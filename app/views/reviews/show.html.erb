@@ -4,6 +4,7 @@
     <% content_for(:author, @review.author) %>
     <% content_for(:rating, @review.rating) %>
     <h2>Review for <%= @review.product.name %></h2>
+    <hr>
     <p><%= @review.content %></p>
     <h3>by <%= @review.author %></h3>
     <h2>Rating: <%= @review.rating %></h2>
