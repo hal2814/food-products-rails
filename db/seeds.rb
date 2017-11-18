@@ -8,7 +8,7 @@ Product.destroy_all
 end
 
 250.times do |index|
-  Review.create!(content: Faker::Lorem.paragraph,
+  Review.create!(content: Faker::Lorem.characters(200),
                   author: Faker::Seinfeld.character,
                   rating: rand(1..5),
                   product_id: rand((Product.first.id)..(Product.first.id+49)))

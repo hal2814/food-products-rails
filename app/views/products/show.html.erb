@@ -19,14 +19,16 @@
 
       <button class="btn btn-info"><%= link_to "New Review", new_product_review_path(@product) %></button>
 
-
-      <%= render "form" %>
-
-      <!-- <%= link_to "Delete", product_path(@product),
-                                       :data => {:confirm => "Are you sure?",
-                                                      :method => "delete"} %> -->
-
-                                                      <h3><a href="/">Home</a></h3>
     </div>
+  </div>
+  <div class="col-md-6">
+    <h2>Edit Product:</h2>
+    <%= render "form" %>
+
+    <%= link_to "Delete", product_path(@product),
+                                     :data => {:confirm => "Are you sure?",
+                                                    :method => "delete"} %>
+
+                                                    <h3><a href="/">Home</a></h3>
   </div>
 </div>
