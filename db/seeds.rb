@@ -14,5 +14,5 @@ end
                   product_id: rand((Product.first.id)..(Product.first.id+49)))
 end
 
-p "Created #{Product.count} stories"
-p "Created #{Review.count} chapters"
+p "Created #{Product.count} products"
+p "Created #{Review.count} reviews"
