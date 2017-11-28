@@ -1,9 +1,6 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-    @recentProducts = Product.order(created_at: :desc).limit(3)
-    @mostReviewed = Product.select("products.name, products.id, products.cost, count(reviews.id) as reviews_count").joins(:reviews).group("products.id").order("reviews_count DESC").limit(1)
-    @usa = Product.where("country = 'USA'")
   end
 
   def show

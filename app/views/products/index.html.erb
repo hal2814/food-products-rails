@@ -18,17 +18,17 @@
     <div class="card-body">
       <h3>Most recently added products: </h3>
       <hr>
-      <% @recentProducts.each do |product| %>
+      <% @products.recent_products.each do |product| %>
       <h4><%= link_to product.name, product_path(product) %></h4>
       <% end %>
       <h3>Most Reviewed Product: </h3>
       <hr>
-      <% @mostReviewed.each do |product| %>
+      <% @products.most_reviewed.each do |product| %>
       <h4><%= link_to product.name, product_path(product) %></h4>
       <% end %>
       <h3>Local Products (USA): </h3>
       <hr>
-      <% @usa.each do |product| %>
+      <% @products.usa.each do |product| %>
       <h4><%= link_to product.name, product_path(product) %></h4>
       <% end %>
 
