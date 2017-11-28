@@ -1,3 +1,4 @@
+<%= render "layouts/errors", :object => @product %>
 
 <div class="card">
   <div class="card-body">
@@ -8,7 +9,7 @@
       <%= f.text_field :cost %>
       <%= f.label :country %>
       <%= f.text_field :country %>
-      <%= f.submit %>
+      <%= f.submit :Submit, :class => 'btn btn-success' %>
     <% end %>
   </div>
 </div>
