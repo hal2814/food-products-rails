@@ -9,6 +9,8 @@
   </head>
   <div class="container">
     <body>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
       <%= yield %>
     </body>
   </div>
